@@ -11,7 +11,7 @@ COPY --from=builder1 /google-cloud-sdk/bin/* /usr/local/bin/
 RUN docker-credential-gcr configure-docker
 
 WORKDIR /
-COPY ./docker-compose.yml /
-COPY ./judge0.conf /
+COPY ./ /
 
-CMD docker-compose
+RUN docker-compose --version && \
+  docker-compose up
