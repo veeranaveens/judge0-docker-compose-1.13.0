@@ -14,4 +14,4 @@ WORKDIR /
 COPY ./ /
 
 RUN docker-compose --version && \
-  docker-compose up
+  docker-compose
